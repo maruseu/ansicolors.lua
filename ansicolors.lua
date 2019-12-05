@@ -2,6 +2,7 @@
 
 -- Copyright (c) 2009 Rob Hoelz <rob@hoelzro.net>
 -- Copyright (c) 2011 Enrique García Cota <enrique.garcia.cota@gmail.com>
+-- Copyright (c) 2019 Maruseu <marceucamp@gmail.com>
 --
 -- Permission is hereby granted, free of charge, to any person obtaining a copy
 -- of this software and associated documentation files (the "Software"), to deal
@@ -32,35 +33,53 @@ if isWindows() then supported = os.getenv("ANSICON") end
 
 local keys = {
   -- reset
-  reset =      0,
+  reset           = 0,
 
   -- misc
-  bright     = 1,
-  dim        = 2,
-  underline  = 4,
-  blink      = 5,
-  reverse    = 7,
-  hidden     = 8,
+  bold            = 1,
+  dim             = 2,
+  underline       = 4,
+  blink           = 5,
+  reverse         = 7,
+  hidden          = 8,
 
   -- foreground colors
-  black     = 30,
-  red       = 31,
-  green     = 32,
-  yellow    = 33,
-  blue      = 34,
-  magenta   = 35,
-  cyan      = 36,
-  white     = 37,
+  black           = 30,
+  red             = 31,
+  green           = 32,
+  yellow          = 33,
+  blue            = 34,
+  magenta         = 35,
+  cyan            = 36,
+  white           = 37,
+-- bright
+  brightblack     = 90,
+  brightred       = 91,
+  brightgreen     = 92,
+  brightyellow    = 93,
+  brightblue      = 94,
+  brightmagenta   = 95,
+  brightcyan      = 96,
+  brightwhite     = 97,
 
   -- background colors
-  blackbg   = 40,
-  redbg     = 41,
-  greenbg   = 42,
-  yellowbg  = 43,
-  bluebg    = 44,
-  magentabg = 45,
-  cyanbg    = 46,
-  whitebg   = 47
+  blackbg         = 40,
+  redbg           = 41,
+  greenbg         = 42,
+  yellowbg        = 43,
+  bluebg          = 44,
+  magentabg       = 45,
+  cyanbg          = 46,
+  whitebg         = 47,
+  -- bright
+  brightblackbg   = 100,
+  brightredbg     = 101,
+  brightgreenbg   = 102,
+  brightyellowbg  = 103,
+  brightbluebg    = 104,
+  brightmagentabg = 105,
+  brightcyanbg    = 106,
+  brightwhitebg   = 107
 }
 
 local escapeString = string.char(27) .. '[%dm'
